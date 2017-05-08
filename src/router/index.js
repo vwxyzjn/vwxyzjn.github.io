@@ -23,7 +23,7 @@ const research_list = () => ({
   component: import('@/components/research_list')
 })
 
-var test = ['hello1', 'hello2', 'hello3']
+var test = ['LSTM-RNN For Sentiment Analysis/article', 'hello2', 'hello3']
 
 var research_articles = []
 for (let i = 0; i < 3; i++){

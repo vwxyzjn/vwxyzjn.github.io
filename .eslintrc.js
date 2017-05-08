@@ -26,6 +26,7 @@ module.exports = {
     // do not require camel case
     "camelcase": [0],
     "space-before-function-paren": [0],
-    "space-before-blocks": [0]
+    "space-before-blocks": [0],
+    "no-useless-escape": [0]
   }
 }
