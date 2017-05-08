@@ -23,37 +23,24 @@ const research_list = () => ({
   component: import('@/components/research_list')
 })
 
+var test = ['hello1', 'hello2', 'hello3']
+
 var research_articles = []
-for (var i = 1; i < 4; i++){
+for (let i = 0; i < 3; i++){
   research_articles.push(() => ({
     // The component to load. Should be a Promise
-    component: import('@/components/research_article/hello' + i)
+    component: import('../components/research_article/' + test[i])
   }))
 }
-
-// research_articles.push(() => ({
-//   // The component to load. Should be a Promise
-//   component: import('@/components/research_article/hello' + 1)
-// }))
-// research_articles.push(() => ({
-//   // The component to load. Should be a Promise
-//   component: import('@/components/research_article/hello' + 2)
-// }))
-// research_articles.push(() => ({
-//     // The component to load. Should be a Promise
-//   component: import('@/components/research_article/hello' + 3)
-// }))
-console.log(research_articles)
 
 var routes = [
   {path: '/', name: 'resume', component: resume},
   {path: '/research', name: 'research_list', component: research_list}
 ]
-for (var j = 0; j < 3; j++){
+for (let j = 0; j < 3; j++){
   routes.push({path: '/research/' + j, name: j, component: research_articles[j]})
   console.log(j)
 }
-console.log(routes)
 
 Vue.use(Router)
 export default new Router({
