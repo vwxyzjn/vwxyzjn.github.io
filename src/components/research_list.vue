@@ -11,11 +11,14 @@
 </template>
 
 <script>
+import article from '@/article.json'
+console.log(article)
+
 export default {
   name: 'research',
   data(){
     return {
-      article_info: []
+      article_info: article
     }
   }
 }
