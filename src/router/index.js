@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Test from '@/components/research_article/LSTM-RNN_For_Sentiment_Analysis/article'
 // const Hello = () => ({
 //   // The component to load. Should be a Promise
 //   component: import('@/components/Hello'),
@@ -36,8 +35,7 @@ for (let i = 0; i < article_folder_name.length; i++){
 
 var routes = [
   {path: '/', name: 'resume', component: resume},
-  {path: '/research', name: 'research_list', component: research_list},
-  {path: '/test', name: 'test', component: Test}
+  {path: '/research', name: 'research_list', component: research_list}
 ]
 for (let j = 0; j < article_folder_name.length; j++){
   routes.push({path: '/research/' + article_folder_name[j], component: research_articles[j]})
