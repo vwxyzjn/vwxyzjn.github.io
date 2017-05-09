@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Plane_Shooting_Problem_Dynamic_Programming",
+        "created_date": "Mon May  8 21:50:18 2017",
+        "abstract": " Introduction  The nation is at war. The enemy send out a squadron of $n$ planes to attack our troops from various angles. You have a very precise anti-aircraft launcher that will be used to shoot enemy planes. If the launcher is aimed directly at an enemy plane, it's guaranteed to destroy the plane. Unfortunately, your launcher is ponderous to reposition. Namely, you can only move 1 degree per mi"
+    },
+    {
+        "title": "LSTM-RNN_For_Sentiment_Analysis",
+        "created_date": "Mon May  8 18:35:26 2017",
+        "abstract": " Baseline algorithm (Demo code from Keras) Firstly we execute [imdb_lstm.py](https://github.com/fchollet/keras/blob/master/examples/imdb_lstm.py)[1] and yields following results where a test accuracy of 82.35% is acquired.   \\`\\`\\`python '''Trains a LSTM on the IMDB sentiment classification task. The dataset is actually too small for LSTM to be of any advantage compared to simpler, much faster met"
+    }
+]

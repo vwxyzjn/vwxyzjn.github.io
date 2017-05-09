@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Test from '@/components/research_article/LSTM-RNN_For_Sentiment_Analysis/article'
 // const Hello = () => ({
 //   // The component to load. Should be a Promise
 //   component: import('@/components/Hello'),
@@ -23,23 +24,23 @@ const research_list = () => ({
   component: import('@/components/research_list')
 })
 
-var test = ['LSTM-RNN For Sentiment Analysis/article', 'hello2', 'hello3']
+var article_folder_name = ['LSTM-RNN_For_Sentiment_Analysis', 'Plane_Shooting_Problem_Dynamic_Programming']
 
 var research_articles = []
-for (let i = 0; i < 3; i++){
+for (let i = 0; i < article_folder_name.length; i++){
   research_articles.push(() => ({
     // The component to load. Should be a Promise
-    component: import('../components/research_article/' + test[i])
+    component: import('@/components/research_article/' + article_folder_name[i] + '/article')
   }))
 }
 
 var routes = [
   {path: '/', name: 'resume', component: resume},
-  {path: '/research', name: 'research_list', component: research_list}
+  {path: '/research', name: 'research_list', component: research_list},
+  {path: '/test', name: 'test', component: Test}
 ]
-for (let j = 0; j < 3; j++){
-  routes.push({path: '/research/' + j, name: j, component: research_articles[j]})
-  console.log(j)
+for (let j = 0; j < article_folder_name.length; j++){
+  routes.push({path: '/research/' + article_folder_name[j], component: research_articles[j]})
 }
 
 Vue.use(Router)

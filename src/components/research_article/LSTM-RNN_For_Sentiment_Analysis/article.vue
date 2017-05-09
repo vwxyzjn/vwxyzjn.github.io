@@ -7,9 +7,10 @@
 
 <script>
 import marked from 'marked'
-import '@/assets/prism-coy.css'
-import '@/assets/prism.js'
-import '@/assets/prism-python.js'
+import Prism from 'prismjs'
+import 'prismjs/themes/prism-coy.css'
+import 'prismjs/prism.js'
+import 'prismjs/components/prism-python.js'
 
 let article = `
 # LSTM-RNN For Sentiment Analysis
@@ -312,29 +313,22 @@ test_max_features.plot(ax = ax8,title = "test_max_features")
 
     [0.709, 0.8402]
     [0.8205, 0.837]
-    
-
-
-
 
     <matplotlib.axes._subplots.AxesSubplot at 0x1d192d00f28>
 
+![png](${require('./output_11_2.png')})
 
 
 
-![png](output_11_2.png)
+![png](${require('./output_11_3.png')})
 
 
 
-![png]({{reverse_url("article_static", "content/research/LSTM-RNN For Sentiment Analysis/output_11_3.png")}})
+![png](${require('./output_11_4.png')})
 
 
 
-![png]({{reverse_url("article_static", "content/research/LSTM-RNN For Sentiment Analysis/output_11_4.png")}})
-
-
-
-![png]({{reverse_url("article_static", "content/research/LSTM-RNN For Sentiment Analysis/output_11_5.png")}})
+![png](${require('./output_11_5.png')})
 
 
 ## Building New Model 
@@ -485,7 +479,7 @@ for i in range(len(tokens)):
 \`\`\`
 
 
-![png]({{reverse_url("article_static", "content/research/LSTM-RNN For Sentiment Analysis/output_16_0.png")}})
+![png](${require('./output_16_0.png')})
 
 
 ## Apply Current Model to Amazon Review Data
@@ -505,7 +499,7 @@ i
 
 
 
-![png]({{reverse_url("article_static", "content/research/LSTM-RNN For Sentiment Analysis/output_18_0.png")}})
+![png](${require('./output_18_0.png')})
 
 
 
@@ -856,6 +850,9 @@ export default {
     return {
       rawHtml: marked(article)
     }
+  },
+  mounted(){
+    Prism.highlightAll()
   }
 }
 </script>
