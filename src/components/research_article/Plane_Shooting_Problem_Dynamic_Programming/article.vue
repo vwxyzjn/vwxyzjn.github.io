@@ -6,6 +6,8 @@
 </template>
 
 <script>
+import 'katex/dist/katex.css'
+import renderMathInElement from 'katex/dist/contrib/auto-render.js'
 import marked from 'marked'
 import Prism from 'prismjs'
 import 'prismjs/themes/prism-coy.css'
@@ -310,6 +312,17 @@ export default {
   },
   mounted(){
     Prism.highlightAll()
+    /*eslint-disable */
+    renderMathInElement(document.body,{
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+            ]
+        }
+    )
+    /*eslint-enable */
   }
 }
 </script>
