@@ -43,7 +43,6 @@ for (let j = 0; j < article_folder_name.length; j++){
 
 Vue.use(Router)
 export default new Router({
-  mode: 'history',
   base: __dirname,
   routes: routes
 })
