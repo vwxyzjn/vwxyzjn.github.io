@@ -1,6 +1,6 @@
 <template>
   <div id="app" style="padding-right: calc(100% - 100vw + 17px);">
-    <div class="container-fluid">
+    <div class="container-fluid" >
       <div class="row">
         <div class="sidebar col-md-4">
           <h1>Costa Huang</h1>
@@ -99,4 +99,6 @@ export default {
 .alignright {
   float: right;
 }
+
+
 </style>

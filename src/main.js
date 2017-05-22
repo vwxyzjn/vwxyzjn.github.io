@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import '../node_modules/bootstrap/scss/bootstrap.scss' //
+import '../node_modules/bootstrap/scss/bootstrap.scss'
 // require('../node_modules/bulma/bulma.sass')
 
 Vue.config.productionTip = false

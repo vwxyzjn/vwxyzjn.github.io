@@ -79,7 +79,7 @@ Image("pic.JPG", height = 600, width = 600)
 
 
 
-![jpeg](${require('./output_3_0.jpeg')})
+![Responsive image](${require('./output_3_0.jpeg')})
 
 
 
@@ -328,6 +328,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+img { 
+    max-width: 100%;
+}
 </style>
