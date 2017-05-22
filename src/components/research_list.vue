@@ -1,7 +1,7 @@
 <template>
   <div class="research-list">
     <div class="article-short" v-for="article in article_info">
-      <h3 class="title"><router-link v-bind:to="'research/'+article.route">{{article.title}}</router-link></h3>
+      <h4 class="title"><router-link v-bind:to="'research/'+article.route">{{article.title}}</router-link></h4>
       
       <!-- START: left align and right align at the same line -->
       <p>{{article.abstract}}</p>

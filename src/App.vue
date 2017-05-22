@@ -1,16 +1,23 @@
 <template>
-  <div id="app" style="padding-right: calc(100% - 100vw + 17px);">
+  <div id="app">
     <div class="container-fluid" >
       <div class="row">
         <div class="sidebar col-md-4">
-          <h1>Costa Huang</h1>
+          <img class="profile_picture" src="./assets/profile_picture.svg">
+          <h1>Costa <span style="font-weight:bold">Huang</span></h1>
           <h5>strive for interesting things</h5>
-          <div class="vertical-button-group" id="test">
+          <div class="menu-item-wrapper">
+            <router-link to="/">resume</router-link>
+            <router-link to="/research">research</router-link>
+            <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
+            <a href="https://github.com/vwxyzjn">github</a>
+          </div>
+<!--           <div class="vertical-button-group" id="test">
             <button type="button" class="btn btn-secondary" v-on:click="to_resume">resume</button>
             <button type="button" class="btn btn-secondary" v-on:click="to_research">research</button>
             <button type="button" class="btn btn-secondary" onclick="location.href='https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU';">math</button>
             <button type="button" class="btn btn-secondary" onclick="location.href='https://github.com/vwxyzjn';">github</button>
-          </div>
+          </div> -->
         </div>
         <div class="content col-md-6">
           <transition name="fade" mode="out-in">
@@ -38,7 +45,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+* {
+  font-family: 'Roboto', sans-serif, -apple-system, "Helvetica Neue", Arial;
+}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
 }
@@ -50,9 +61,27 @@ export default {
   position: relative;
   bottom: 0;
   top: 0;
-  padding-top: 20%;
+  padding-top: 5vh;
   text-align: center;
-  padding-right: 40px;
+
+  img {
+    width: 130px;
+    height: 130px;
+  }
+  h5{
+    font-size: 1.05em;
+    color: #53657D;
+  }
+
+  .menu-item-wrapper{
+    max-width: 100%;
+    display: inline-block;
+    padding-top: 18px;
+
+    a {
+      padding: 15px;
+    }
+  }
 }
 
 .vertical-button-group{
@@ -68,7 +97,6 @@ export default {
 
 .content {
   padding: 40px; 
-  padding-top: 60px;
   position: relative;
   box-sizing: border-box;
   bottom: 0;
@@ -76,11 +104,17 @@ export default {
 
 @media (min-width: 768px) {
   .sidebar{
-    border-right: 1px solid #333;
-    border-color: rgba(0, 0, 0, 0.1);
     height: 100vh;
+    padding-top: 20vh;
     position: sticky;
-    text-align: right;
+  }
+
+  #app {
+    padding-right: calc(100% - 100vw + 17px);
+  }
+
+  .content {
+    padding-top: 60px;
   }
 }
 
