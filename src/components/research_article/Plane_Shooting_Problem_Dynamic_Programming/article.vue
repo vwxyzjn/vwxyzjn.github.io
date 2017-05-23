@@ -328,8 +328,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style>
-img { 
-    max-width: 100%;
-}
+<style lang="scss">
+@import '../article_font'
 </style>

@@ -3,15 +3,18 @@
     <div class="container-fluid" >
       <div class="row">
         <div class="sidebar col-md-4">
-          <img class="profile_picture" src="./assets/profile_picture.svg">
-          <h1>Costa <span style="font-weight:bold">Huang</span></h1>
-          <h5>strive for interesting things</h5>
-          <div class="menu-item-wrapper">
-            <router-link to="/">resume</router-link>
-            <router-link to="/research">research</router-link>
-            <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
-            <a href="https://github.com/vwxyzjn">github</a>
+          <div class="profile_info">
+            <img class="profile_picture" src="./assets/profile_picture.svg">
+            <h1>Costa <span style="font-weight:bold">Huang</span></h1>
+            <h5>strive for interesting things</h5>
+            <div class="menu-item-wrapper">
+              <router-link to="/">resume</router-link>
+              <router-link to="/research">research</router-link>
+              <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
+              <a href="https://github.com/vwxyzjn">github</a>
+            </div>
           </div>
+          
 <!--           <div class="vertical-button-group" id="test">
             <button type="button" class="btn btn-secondary" v-on:click="to_resume">resume</button>
             <button type="button" class="btn btn-secondary" v-on:click="to_research">research</button>
@@ -80,25 +83,19 @@ export default {
 
     a {
       padding: 15px;
+      color: #9DBF15;
+    }
+
+    .router-link-exact-active {
+      color: black;
     }
   }
 }
 
-.vertical-button-group{
-  display: inline-block;
-}
-
-.vertical-button-group > .btn {
-  display: block;
-    width: 100%;
-    max-width: 100%;
-    margin-top: 10px;
-}
 
 .content {
   padding: 40px; 
   position: relative;
-  box-sizing: border-box;
   bottom: 0;
 }
 
@@ -107,6 +104,13 @@ export default {
     height: 100vh;
     padding-top: 20vh;
     position: sticky;
+    text-align: right;
+
+    .profile_info {
+      display: inline-block;
+      text-align: center;
+      width: 70%;
+    }
   }
 
   #app {
@@ -127,12 +131,6 @@ export default {
   padding-bottom: 30px;
 }
 
-.alignleft {
-  float: left;
-}
-.alignright {
-  float: right;
-}
 
 
 </style>
