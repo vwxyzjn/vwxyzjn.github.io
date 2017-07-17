@@ -1,48 +1,58 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// const Hello = () => ({
-//   // The component to load. Should be a Promise
-//   component: import('@/components/Hello'),
-//   // A component to use while the async component is loading
-//   loading: LoadingComp,
-//   // A component to use if the load fails
-//   error: ErrorComp,
-//   // Delay before showing the loading component. Defaults to 200ms.
-//   delay: 5000,
-//   // The error component will be displayed if a timeout is provided and exceeded.
-//   timeout: 3000
-// })
+var articles_info = require('@/articles_info.json')
+Vue.use(Router)
 
 // async load components
 const resume = () => ({
-  // The component to load. Should be a Promise
   component: import('@/components/resume')
 })
 const research_list = () => ({
-  // The component to load. Should be a Promise
   component: import('@/components/research_list')
 })
 
-var article_folder_name = ['LSTM-RNN_For_Sentiment_Analysis', 'Plane_Shooting_Problem_Dynamic_Programming']
-
-var research_articles = []
-for (let i = 0; i < article_folder_name.length; i++){
+let research_articles = []
+for (let i = 0; i < articles_info.length; i++){
   research_articles.push(() => ({
-    // The component to load. Should be a Promise
-    component: import('@/components/research_article/' + article_folder_name[i] + '/article')
+    component: import('@/components/research_article/' + articles_info[i]['route'] + '/article')
   }))
 }
 
-var routes = [
-  {path: '/', name: 'resume', component: resume},
-  {path: '/research', name: 'research_list', component: research_list}
+let routes = [
+  {
+    path: '/',
+    name: 'resume',
+    component: resume,
+    meta: {
+      title: "Costa's Resume"
+    }
+  },
+  {
+    path: '/research',
+    name: 'research_list',
+    component: research_list,
+    meta: {
+      title: "Costa's Research"
+    }
+  }
 ]
-for (let j = 0; j < article_folder_name.length; j++){
-  routes.push({path: '/research/' + article_folder_name[j], component: research_articles[j]})
+for (let j = 0; j < articles_info.length; j++){
+  routes.push({
+    path: '/research/' + articles_info[j]['route'],
+    component: research_articles[j],
+    meta: {
+      title: articles_info[j]['route'].replace(/_/g, ' ') // replace all occurence of '_' with " "
+    }
+  })
 }
 
-Vue.use(Router)
-export default new Router({
+const router = new Router({
   base: __dirname,
   routes: routes
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
+})
+export default router

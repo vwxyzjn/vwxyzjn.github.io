@@ -1,7 +1,7 @@
 <template>
   <div class="research-list">
     <div class="article-short" v-for="article in article_info">
-      <h1 class="title"><router-link v-bind:to="'research/'+article.route">{{article.title}}</router-link></h1>
+      <h1 class="title"><router-link v-bind:to="'research/'+article.route">{{article.route.replace(/_/g, ' ')}}</router-link></h1>
       
       <!-- START: left align and right align at the same line -->
       <p>{{article.abstract}}</p>
@@ -12,13 +12,13 @@
 </template>
 
 <script>
-import article from '@/article.json'
+import articles_info from '@/articles_info.json'
 
 export default {
   name: 'research',
   data(){
     return {
-      article_info: article
+      article_info: articles_info
     }
   }
 }
