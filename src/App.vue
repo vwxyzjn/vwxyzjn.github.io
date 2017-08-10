@@ -14,13 +14,6 @@
               <a href="https://github.com/vwxyzjn">github</a>
             </div>
           </div>
-          
-<!--           <div class="vertical-button-group" id="test">
-            <button type="button" class="btn btn-secondary" v-on:click="to_resume">resume</button>
-            <button type="button" class="btn btn-secondary" v-on:click="to_research">research</button>
-            <button type="button" class="btn btn-secondary" onclick="location.href='https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU';">math</button>
-            <button type="button" class="btn btn-secondary" onclick="location.href='https://github.com/vwxyzjn';">github</button>
-          </div> -->
         </div>
         <div class="content col-md-6">
           <transition name="fade" mode="out-in">
@@ -48,89 +41,72 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-* {
-  font-family: 'Roboto', sans-serif, -apple-system, "Helvetica Neue", Arial;
-}
+<style lang="sass" scoped>
+*
+  font-family: 'Roboto', sans-serif, -apple-system, "Helvetica Neue", Arial
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-enter-active, .fade-leave-active
+  transition: opacity .35s
+
+.fade-enter, .fade-leave-to
   opacity: 0
-}
 
-.sidebar{
-  position: relative;
-  bottom: 0;
-  top: 0;
-  padding-top: 5vh;
-  text-align: center;
+.sidebar
+  position: relative
+  bottom: 0
+  top: 0
+  padding-top: 5vh
+  text-align: center
 
-  img {
-    width: 130px;
-    height: 130px;
-  }
-  h5{
-    font-size: 1.05em;
-    color: #53657D;
-  }
+  img
+    width: 130px
+    height: 130px
 
-  .menu-item-wrapper{
-    max-width: 100%;
-    display: inline-block;
-    padding-top: 18px;
+  h5
+    font-size: 1.05em
+    color: #53657D
 
-    a {
-      padding: 15px;
-      color: #9DBF15;
-    }
+  .menu-item-wrapper
+    max-width: 100%
+    display: inline-block
+    padding-top: 18px
 
-    .router-link-exact-active {
-      color: black;
-    }
-  }
-}
+    a
+      padding: 10px
+      color: #9DBF15
 
+    .router-link-exact-active
+      color: black
 
-.content {
-  padding: 40px; 
-  position: relative;
-  bottom: 0;
-}
+.content
+  padding: 40px
+  position: relative
+  bottom: 0
 
-@media (min-width: 768px) {
-  .sidebar{
-    height: 100vh;
-    padding-top: 20vh;
-    position: sticky;
-    text-align: right;
+@media (min-width: 768px)
+  .sidebar
+    height: 100vh
+    padding-top: 20vh
+    position: sticky
+    text-align: right
 
-    .profile_info {
-      display: inline-block;
-      text-align: center;
-      width: 70%;
-    }
-  }
+    .profile_info
+      display: inline-block
+      text-align: center
+      width: 70%
 
-  #app {
-    padding-right: calc(100% - 100vw + 17px);
-  }
-
-  .content {
-    padding-top: 60px;
-  }
-}
-
-/* Content CSS section */
-.title{
-  margin-bottom: 20px;
-}
-
-.section{
-  padding-bottom: 30px;
-}
+  #app
+    padding-right: calc(100% - 100vw + 17px)
 
 
+  .content
+    padding-top: 60px
+
+
+.title
+  margin-bottom: 20px
+
+.section
+  padding-bottom: 30px
 
 </style>
