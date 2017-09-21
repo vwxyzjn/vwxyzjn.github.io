@@ -1,5 +1,10 @@
 [
     {
+        "route": "StreetTraffic-Summer-Research-Reflection",
+        "created_date": "Aug 28 2017",
+        "abstract": "Our research project successfully produces a server software named StreetTraffic that collects and analyzes traffic flow data. First, it crawls traffic flow data of some given regions or routes defined by the user; then, it produces a web page in which the user can visualize the traffic flow history of a given route within the region on which he/she crawled data."
+    },
+    {
         "route": "Plane-Shooting-Problem-Dynamic-Programming",
         "created_date": "May 8 2017",
         "abstract": "The nation is at war. The enemy send out a squadron of nn planes to attack our troops from various angles. You have a very precise anti-aircraft launcher that will be used to shoot enemy planes. If the launcher is aimed directly at an enemy plane, it's guaranteed to destroy the plane. Unfortunately, your launcher is ponderous to reposition. Namely, you can only move 1 degree per minute. Then 1 plane enter your shoot range per minute. Once they go passed your shoot range, they are gone and you can't shoot them again."

@@ -41,3 +41,87 @@ export default {
 }
 /* eslint-enable */
 </script>
+
+<style lang="scss">
+.research-article{
+  img { 
+      max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  li {
+    font-size: 0.85rem;
+  }
+
+  pre {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .research-article{
+    h1 {
+      font-size: 1.75rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.94rem;
+    }
+
+    li {
+      font-size: 0.94rem;
+    }
+
+    pre {
+      font-size: 0.94rem;
+    }
+  }
+}
+</style>
