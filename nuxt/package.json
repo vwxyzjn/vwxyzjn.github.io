@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
     "katex": "^0.8.3",
+    "marked": "^0.3.6",
     "nuxt": "^1.0.0-rc11",
     "prismjs": "^1.8.1"
   },
