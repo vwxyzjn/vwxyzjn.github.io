@@ -1,0 +1,227 @@
+<!DOCTYPE html><html data-n-head="" data-n-head-ssr><meta data-n-head="true" charset="utf-8"><meta data-n-head="true" content="width=device-width,initial-scale=1" name="viewport"><meta data-n-head="true" content="Nuxt.js project" name="description" data-hid="description"><title data-n-head="true">nuxt</title><link href="/favicon.ico" rel="icon" data-n-head="true" type="image/x-icon"><link href="/_nuxt/manifest.9cfb397fa57a6417b73b.js" rel="preload" as="script"><link href="/_nuxt/common.dd13ec92257c645d9073.js" rel="preload" as="script"><link href="/_nuxt/app.889dda0675130533c7f6.js" rel="preload" as="script"><link href="/_nuxt/layouts\default.6951953b466ea203db4d.js" rel="preload" as="script"><link href="/_nuxt/pages\research\Plane-Shooting-Problem-Dynamic-Programming\index.b09962d0a17e7d6d29a4.js" rel="preload" as="script"><link href="/_nuxt/pages\research\LSTM-RNN-For-Sentiment-Analysis\index.6452176b7dafefc296f7.js" rel="prefetch"><link href="/_nuxt/pages\research\index.7dcfa36b98ecbeb4b6da.js" rel="prefetch"><link href="/_nuxt/pages\index.ee44e849f3c9b6d6f1b3.js" rel="prefetch"><style data-vue-ssr-id="b2bfc34e:0 961630fe:0">.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;-webkit-transition:width .2s,opacity .4s;transition:width .2s,opacity .4s;opacity:1;background-color:#efc14e;z-index:999999}[data-v-71bfcebd]{font-family:Roboto,sans-serif}.fade-enter-active[data-v-71bfcebd],.fade-leave-active[data-v-71bfcebd]{-webkit-transition:opacity .35s;transition:opacity .35s}.fade-enter[data-v-71bfcebd],.fade-leave-to[data-v-71bfcebd]{opacity:0}.sidebar[data-v-71bfcebd]{position:relative;bottom:0;top:0;padding-top:5vh;text-align:center}.sidebar img[data-v-71bfcebd]{width:130px;height:130px}.sidebar h5[data-v-71bfcebd]{font-size:1.05em;color:#53657d}.sidebar .menu-item-wrapper[data-v-71bfcebd]{display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-top:18px}.sidebar .menu-item-wrapper a[data-v-71bfcebd]{padding:10px;color:#9dbf15}.sidebar .menu-item-wrapper .router-link-exact-active[data-v-71bfcebd]{color:#000}.content[data-v-71bfcebd]{padding:40px;position:relative;bottom:0}@media (min-width:768px){.sidebar[data-v-71bfcebd]{height:100vh;padding-top:20vh;position:-webkit-sticky;position:sticky;text-align:right}.sidebar .profile_info[data-v-71bfcebd]{display:inline-block;text-align:center;width:70%}#app[data-v-71bfcebd]{padding-right:calc(100% - 100vw + 17px)}.content[data-v-71bfcebd]{padding-top:60px}}.title[data-v-71bfcebd]{margin-bottom:20px}.section[data-v-71bfcebd]{padding-bottom:30px}</style><body data-n-head=""><div id="__nuxt" data-server-rendered="true"><div class="nuxt-progress" style="width:0%;height:2px;background-color:#3b8070;opacity:0"></div><div id="app" data-v-71bfcebd><div class="container-fluid" data-v-71bfcebd><div class="row" data-v-71bfcebd><div class="sidebar col-md-4" data-v-71bfcebd><div class="profile_info" data-v-71bfcebd><img class="profile_picture" data-v-71bfcebd src="/_nuxt/img/profile_picture.3794808.svg"><h1 data-v-71bfcebd>Costa <span data-v-71bfcebd style="font-weight:700">Huang</span></h1><h5 data-v-71bfcebd>strive for interesting things</h5><div class="menu-item-wrapper" data-v-71bfcebd><a href="/" data-v-71bfcebd class="nuxt-link-active">resume</a><a href="/research" data-v-71bfcebd class="nuxt-link-active">research</a><a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU" data-v-71bfcebd>math</a><a href="https://github.com/vwxyzjn" data-v-71bfcebd>github</a></div></div></div><div class="content col-md-6" data-v-71bfcebd><div class="research-article" data-v-71bfcebd data-v-71bfcebd><div><h1 id="the-plane-shooting-problem-dynamic-programming-">The Plane Shooting Problem (Dynamic Programming)</h1><p>Author: Costa Huang<h2 id="introduction">Introduction</h2><p>The nation is at war. The enemy send out a squadron of $n$ planes to attack our troops from various angles. You have a very precise anti-aircraft launcher that will be used to shoot enemy planes. If the launcher is aimed directly at an enemy plane, it's guaranteed to destroy the plane. Unfortunately, your launcher is ponderous to reposition. Namely, you can only move 1 degree per minute. Then 1 plane enter your shoot range per minute. Once they go passed your shoot range, they are gone and you can't shoot them again. You are tasked to destroy the first plane, and then destroy as many plane as possible.<h2 id="examples">Examples</h2><p>The plane is coming at [50,49,60,48,54,55,56,57,58] angles for each minute. You shoot down the first plane at 50 degree and you can either statys at 50 degree, move to 51 degree, or move to 49 degree. The optimal solution would be shooting down 6 aircraft: [50,54,55,56,57,58].<h2 id="analysis">Analysis</h2><p>Notice this problem can be solved by brute force method. For each position, we can either statys at $k$ degree, move to $k+1$ degree, or move to $k-1$ degree. So we can just try all possible possibilities and see which possibility shoot the most plane. We therefore demonstrate a brute force approach:<pre><code class="lang-python">import pandas as pd
+import numpy as np
+
+# Some testing data
+a_1 = [50,49,60,48,54,55,56,57,58]
+a_2 = [50,49,60,48,54,55,56,47,46]
+a_3 = [50,80,81,82,83]
+a_4 = [50,51,49,48]
+a_5= [50,51,50,51,50,55,56,57,58,59,60]
+a_6 = [50,49,48,50,50,50]
+
+
+def brute_force(angles, start_angle):
+
+    if len(angles) == 0:
+        return 0
+    x = brute_force(angles[1:], start_angle+1)
+    y = brute_force(angles[1:], start_angle-1)
+    z = brute_force(angles[1:], start_angle)
+    if angles[0] == start_angle:
+        return max(x + 1, y + 1, z + 1)
+    else:
+        return max(x, y, z)
+
+print(brute_force(a_1, a_1[0]))
+print(brute_force(a_2, a_2[0]))
+print(brute_force(a_5, a_5[0]))
+</code></pre><pre><code>6
+5
+8
+</code></pre><p>Then we draw the brute force tree for analysis:<pre><code class="lang-python">from IPython.display import Image
+Image("pic.JPG", height = 600, width = 600)
+</code></pre><p><img src="/_nuxt/img/output_3_0.9db7dc7.jpeg" alt="Responsive image"><p>We somehow spotted this pattern: there are so many interconnected edges, which means we can maybe find a way to efficiently use the past information. For example, if we want to know what's the maximum number of planes we can shoot down if we end in 49, there are only two ways to 49: [50,49,49], [50,50,49], but in the process we would have already know which ways shoot down more planes, and we can just take the maximum of them. Therefore we demonstrate the dynamic programming approach:<pre><code class="lang-python">angles = a_6
+start_angle = angles[0]
+
+df = pd.DataFrame(index = angles, columns = range(start_angle - len(angles),start_angle + len(angles)+1), data = 0)
+def dynamic_programming(df, print_output = False):
+    df.iloc[0][start_angle] = 1
+    columns = list(df.columns)
+    rows = list(df.index)
+
+    for row in range(0, len(df)-1):
+        # record the degree of the upcoming plane, which is in next row
+        plane_degree = rows[row+1]
+
+        for col in range(1, len(df.iloc[0])-1):
+            # if the current column has data, the cannon can
+            # go down left, go down, or go down right
+            if df.iloc[row].iloc[col] != 0:
+                data = df.iloc[row].iloc[col]
+
+                # go down left
+                left_column_degree = columns[col-1]
+                # if our move results in a new destoryed plane: 
+                if left_column_degree == plane_degree:
+                    df.iloc[row+1].iloc[col-1] = max(df.iloc[row+1].iloc[col-1], data + 1)
+                else:
+                    df.iloc[row+1].iloc[col-1] = max(df.iloc[row+1].iloc[col-1], data)
+
+                # go down
+                down_column_degree = columns[col]
+                # if our move results in a new destoryed plane: 
+                if down_column_degree == plane_degree:
+                    df.iloc[row+1].iloc[col] = max(df.iloc[row+1].iloc[col], data + 1)
+                else:
+                    df.iloc[row+1].iloc[col] = max(df.iloc[row+1].iloc[col], data)
+
+                # go down right
+                right_column_degree = columns[col+1]
+                # if our move results in a new destoryed plane: 
+                if right_column_degree == plane_degree:
+                    df.iloc[row+1].iloc[col+1] = max(df.iloc[row+1].iloc[col+1], data + 1)
+                else:
+                    df.iloc[row+1].iloc[col+1] = max(df.iloc[row+1].iloc[col+1], data)
+
+        if print_output == True:
+            print(df)
+            print("===============================================================")
+
+    # now we are ready to trace the planes we shoot down
+    # in the last row search the largest possible planes shoot down in the current row,
+    # namely, max_planes = [planes shoot down, column number]
+    row = len(df)-1 
+    max_planes = [0,0]
+    for col in range(0, len(df.iloc[row])):
+        if df.iloc[row].iloc[col] > max_planes[0]:
+            max_planes[0] = df.iloc[row].iloc[col]
+            max_planes[1] = col
+
+
+    # now find the order of planes to shoot down
+    moving_record = [columns[max_planes[1]]]
+    print("now we start to trace back our move")
+    while (row > 0):
+        # from the last row where we hit maximum number of plane, we can go up, go up left, go up right to trace
+        # the record, but we need to go to the maximum of them
+        left_col = max_planes[1]-1
+        right_col = max_planes[1]+2
+        # reset max_planes[planes shoot down] and go up one row
+        max_planes[0] = 0  
+        row -= 1
+        for col in range(left_col, right_col):
+            if df.iloc[row].iloc[col] > max_planes[0]:
+                max_planes[0] = df.iloc[row].iloc[col]
+                max_planes[1] = col
+
+        moving_record += [columns[max_planes[1]]]
+
+        print(moving_record)
+
+    moving_record.reverse()
+    print("after reversing, now the moving record is:")
+    print(moving_record)
+
+
+    # Lastly, we ouput the specific planes we choose to shoot
+    planes_chosen = []
+    for i in range(0, len(df.index)):
+        if df.index[i] == moving_record[i]:
+            planes_chosen += [df.index[i]]
+
+    print("lastly, we print out planes chosen to shoot down")
+    print(planes_chosen)
+
+    return max(df.iloc[-1])
+
+
+
+dp_output = dynamic_programming(df, print_output = True)
+print("input data is ", angles)
+print("dynamic programming can shoot down", dp_output, "planes")
+print("brute force method can shoot down", brute_force(angles, start_angle), "planes")
+</code></pre><pre><code>    44  45  46  47  48  49  50  51  52  53  54  55  56
+50   0   0   0   0   0   0   1   0   0   0   0   0   0
+49   0   0   0   0   0   2   1   1   0   0   0   0   0
+48   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+===============================================================
+    44  45  46  47  48  49  50  51  52  53  54  55  56
+50   0   0   0   0   0   0   1   0   0   0   0   0   0
+49   0   0   0   0   0   2   1   1   0   0   0   0   0
+48   0   0   0   0   3   2   2   1   1   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+===============================================================
+    44  45  46  47  48  49  50  51  52  53  54  55  56
+50   0   0   0   0   0   0   1   0   0   0   0   0   0
+49   0   0   0   0   0   2   1   1   0   0   0   0   0
+48   0   0   0   0   3   2   2   1   1   0   0   0   0
+50   0   0   0   3   3   3   3   2   1   1   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+===============================================================
+    44  45  46  47  48  49  50  51  52  53  54  55  56
+50   0   0   0   0   0   0   1   0   0   0   0   0   0
+49   0   0   0   0   0   2   1   1   0   0   0   0   0
+48   0   0   0   0   3   2   2   1   1   0   0   0   0
+50   0   0   0   3   3   3   3   2   1   1   0   0   0
+50   0   0   3   3   3   3   4   3   2   1   1   0   0
+50   0   0   0   0   0   0   0   0   0   0   0   0   0
+===============================================================
+    44  45  46  47  48  49  50  51  52  53  54  55  56
+50   0   0   0   0   0   0   1   0   0   0   0   0   0
+49   0   0   0   0   0   2   1   1   0   0   0   0   0
+48   0   0   0   0   3   2   2   1   1   0   0   0   0
+50   0   0   0   3   3   3   3   2   1   1   0   0   0
+50   0   0   3   3   3   3   4   3   2   1   1   0   0
+50   0   3   3   3   3   4   5   4   3   2   1   1   0
+===============================================================
+now we start to trace back our move
+[50, 50]
+[50, 50, 49]
+[50, 50, 49, 48]
+[50, 50, 49, 48, 49]
+[50, 50, 49, 48, 49, 50]
+
+after reversing, now the moving record is:
+[50, 49, 48, 49, 50, 50]
+
+lastly, we print out planes chosen to shoot down
+[50, 49, 48, 50, 50]
+
+input data is  [50, 49, 48, 50, 50, 50]
+dynamic programming can shoot down 5 planes
+brute force method can shoot down 5 planes
+</code></pre><p>Now we can test different data by generating some random list and run the program to see when does brute force become really slow.<pre><code class="lang-python">t = np.random.choice(10, 14) + 50
+t
+# (2, 5) + 10 would out put size 5, origin 10, random integer from (10-2, 10+2) 
+# at size 14 is where you can see brute force takes more than an instant
+# notice 3^14 = 4782969
+</code></pre><pre><code>array([59, 53, 50, 50, 54, 56, 50, 58, 53, 57, 54, 58, 52, 53])
+</code></pre><pre><code class="lang-python">angles = t
+start_angle = angles[0]
+df = pd.DataFrame(index = angles, columns = range(start_angle - len(angles),start_angle + len(angles)+1), data = 0)
+dp_ouput = dynamic_programming(df)
+print("
+input data is ", angles)
+print("dynamic programming can shoot down", dp_ouput, "planes")
+print("brute force method can shoot down", brute_force(angles, start_angle), "planes")
+</code></pre><pre><code>now we start to trace back our move
+[53, 52]
+[53, 52, 53]
+[53, 52, 53, 54]
+[53, 52, 53, 54, 53]
+[53, 52, 53, 54, 53, 53]
+[53, 52, 53, 54, 53, 53, 54]
+[53, 52, 53, 54, 53, 53, 54, 55]
+[53, 52, 53, 54, 53, 53, 54, 55, 56]
+[53, 52, 53, 54, 53, 53, 54, 55, 56, 55]
+[53, 52, 53, 54, 53, 53, 54, 55, 56, 55, 56]
+[53, 52, 53, 54, 53, 53, 54, 55, 56, 55, 56, 57]
+[53, 52, 53, 54, 53, 53, 54, 55, 56, 55, 56, 57, 58]
+[53, 52, 53, 54, 53, 53, 54, 55, 56, 55, 56, 57, 58, 59]
+
+after reversing, now the moving record is:
+[59, 58, 57, 56, 55, 56, 55, 54, 53, 53, 54, 53, 52, 53]
+
+lastly, we print out planes chosen to shoot down
+[59, 56, 53, 54, 52, 53]
+
+input data is  [59 53 50 50 54 56 50 58 53 57 54 58 52 53]
+dynamic programming can shoot down 6 planes
+brute force method can shoot down 6 planes
+</code></pre></div></div></div></div></div></div></div><script type="text/javascript">window.__NUXT__={layout:"default",data:[{}],error:null,state:{},serverRendered:!0}</script><script defer src="/_nuxt/manifest.9cfb397fa57a6417b73b.js"></script><script defer src="/_nuxt/layouts\default.6951953b466ea203db4d.js"></script><script defer src="/_nuxt/pages\research\Plane-Shooting-Problem-Dynamic-Programming\index.b09962d0a17e7d6d29a4.js"></script><script defer src="/_nuxt/common.dd13ec92257c645d9073.js"></script><script defer src="/_nuxt/app.889dda0675130533c7f6.js"></script>
