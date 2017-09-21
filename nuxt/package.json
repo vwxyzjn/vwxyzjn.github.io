@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-beta",
-    "katex": "^0.8.3",
+    "katex": "^0.7.1",
     "marked": "^0.3.6",
     "nuxt": "^1.0.0-rc11",
     "prismjs": "^1.8.1"
@@ -29,6 +29,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jquery": "^3.2.1",
     "node-sass": "^4.5.3",
     "popper.js": "^1.12.5",
     "pug": "^2.0.0-rc.4",

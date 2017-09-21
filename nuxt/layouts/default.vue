@@ -27,7 +27,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import '../node_modules/bootstrap/scss/bootstrap.scss'
+import articleView from '~/components/articleView.vue'
+Vue.component('article-view', articleView)
+
 export default {
   name: 'app',
   methods: {

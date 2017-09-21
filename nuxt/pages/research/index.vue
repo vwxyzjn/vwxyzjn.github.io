@@ -1,7 +1,7 @@
 <template>
   <div class="research-list">
     <div class="article-short" v-for="article in articlesInfo" :key="article.route">
-      <h1 class="title"><router-link v-bind:to="'research/'+article.route">{{article.route.replace(/_/g, ' ')}}</router-link></h1>
+      <h1 class="title"><nuxt-link v-bind:to="'/research/'+article.route">{{article.route.replace(/_/g, ' ')}}</nuxt-link></h1>
       
       <!-- START: left align and right align at the same line -->
       <p>{{article.abstract}}</p>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import articlesInfo from './articlesInfo.json'
+import articlesInfo from '../articlesInfo.json'
 console.log(articlesInfo)
 
 export default {

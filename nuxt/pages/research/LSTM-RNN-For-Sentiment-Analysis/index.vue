@@ -1,18 +1,10 @@
 <template>
-  <div class="research-article">
-    <div v-html="rawHtml">
-    </div>
-  </div>
+  <article-view :article="articleStr"></article-view>
 </template>
 
 <script>
-import marked from 'marked'
-import Prism from 'prismjs'
-import 'prismjs/themes/prism-coy.css'
-import 'prismjs/prism.js'
-import 'prismjs/components/prism-python.js'
-
-let article = `
+/* eslint-disable */
+let articleStr = `
 # LSTM-RNN For Sentiment Analysis
 Author: Trilby Hren and Costa Huang
 
@@ -842,23 +834,12 @@ Therefore by experimenting different *"maxlen"*, *"max_features"* , and optimize
 
 [9] Arnold T, *STAT 365/665: Data Mining and Machine Learning*, [Recurrent neural networks](http://euler.stat.yale.edu/~tba3/stat665/lectures/lec21/notebook21.html), 2016
 `
-
-// document.getElementById('results').innerHTML = (marked(article))
 export default {
-  name: 'article',
-  data(){
+  data () {
     return {
-      rawHtml: marked(article)
+      articleStr: articleStr
     }
-  },
-  mounted(){
-    Prism.highlightAll()
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
-@import '../article_font'
-
-</style>
