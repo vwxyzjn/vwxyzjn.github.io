@@ -6,7 +6,7 @@
 /* eslint-disable */
 let articleStr = `
 
-# StreetTraffic Summer Research Reflection
+# Furman Summer Research Reflection
 
 Author: Costa Huang
 
@@ -18,9 +18,9 @@ Aug 28, 2017
 
 <br>
 
-## Traffic Data Analysis for Better Travel Scheduling
+## Creation of StreetTraffic
 
-Our research project successfully produces a server software named StreetTraffic that collects and analyzes traffic flow data. First,
+Our research project successfully produces a server software named **StreetTraffic** that collects and analyzes traffic flow data. First,
 it crawls traffic flow data of some given regions or routes defined by the user; then, it produces a web page in which the user can
 visualize the traffic flow history of a given route within the region on which he/she crawled data. This empowers the user to visualize and 
 understand the historical traffic pattern of his/her interested route, which could be valuable to commuters or someone who wants to plan a trip. 
@@ -259,6 +259,11 @@ export default {
   data () {
     return {
       articleStr: articleStr
+    }
+  },
+  head () {
+    return {
+      title: 'Costa Huang | Furman Summer Research Reflection'
     }
   }
 }

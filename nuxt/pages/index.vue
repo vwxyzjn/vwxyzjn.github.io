@@ -63,7 +63,11 @@
 
 <script>
 export default {
-  name: 'resume'
+  head () {
+    return {
+      title: "Costa Huang's Resume"
+    }
+  }
 }
 </script>
 

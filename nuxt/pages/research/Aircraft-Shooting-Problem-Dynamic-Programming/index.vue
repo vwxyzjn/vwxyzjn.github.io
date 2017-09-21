@@ -6,20 +6,20 @@
 /* eslint-disable */
 let articleStr = `
 
-# The Plane Shooting Problem (Dynamic Programming)
+# The aircraft Shooting Problem (Dynamic Programming)
 Author: Costa Huang
 
 ## Introduction
 
-The nation is at war. The enemy send out a squadron of $n$ planes to attack our troops from various angles. You have a very precise anti-aircraft launcher that will be used to shoot enemy planes. If the launcher is aimed directly at an enemy plane, it's guaranteed to destroy the plane. Unfortunately, your launcher is ponderous to reposition. Namely, you can only move 1 degree per minute. Then 1 plane enter your shoot range per minute. Once they go passed your shoot range, they are gone and you can't shoot them again. You are tasked to destroy the first plane, and then destroy as many plane as possible. 
+The nation is at war. The enemy send out a squadron of $n$ aircrafts to attack our troops from various angles. You have a very precise anti-aircraft launcher that will be used to shoot enemy aircrafts. If the launcher is aimed directly at an enemy aircraft, it's guaranteed to destroy the aircraft. Unfortunately, your launcher is ponderous to reposition. Namely, you can only move 1 degree per minute. Then 1 aircraft enter your shoot range per minute. Once they go passed your shoot range, they are gone and you can't shoot them again. You are tasked to destroy the first aircraft, and then destroy as many aircraft as possible. 
 
 ## Examples
 
-The plane is coming at [50,49,60,48,54,55,56,57,58] angles for each minute. You shoot down the first plane at 50 degree and you can either statys at 50 degree, move to 51 degree, or move to 49 degree. The optimal solution would be shooting down 6 aircraft: [50,54,55,56,57,58].
+The aircraft is coming at [50,49,60,48,54,55,56,57,58] angles for each minute. You shoot down the first aircraft at 50 degree and you can either statys at 50 degree, move to 51 degree, or move to 49 degree. The optimal solution would be shooting down 6 aircraft: [50,54,55,56,57,58].
 
 ## Analysis
 
-Notice this problem can be solved by brute force method. For each position, we can either statys at $k$ degree, move to $k+1$ degree, or move to $k-1$ degree. So we can just try all possible possibilities and see which possibility shoot the most plane. We therefore demonstrate a brute force approach:
+Notice this problem can be solved by brute force method. For each position, we can either statys at $k$ degree, move to $k+1$ degree, or move to $k-1$ degree. So we can just try all possible possibilities and see which possibility shoot the most aircraft. We therefore demonstrate a brute force approach:
 
 
 
@@ -73,7 +73,7 @@ Image("pic.JPG", height = 600, width = 600)
 
 
 
-We somehow spotted this pattern: there are so many interconnected edges, which means we can maybe find a way to efficiently use the past information. For example, if we want to know what's the maximum number of planes we can shoot down if we end in 49, there are only two ways to 49: [50,49,49], [50,50,49], but in the process we would have already know which ways shoot down more planes, and we can just take the maximum of them. Therefore we demonstrate the dynamic programming approach:
+We somehow spotted this pattern: there are so many interconnected edges, which means we can maybe find a way to efficiently use the past information. For example, if we want to know what's the maximum number of aircrafts we can shoot down if we end in 49, there are only two ways to 49: [50,49,49], [50,50,49], but in the process we would have already know which ways shoot down more aircrafts, and we can just take the maximum of them. Therefore we demonstrate the dynamic programming approach:
 
 
 \`\`\`python
@@ -296,6 +296,11 @@ export default {
   data () {
     return {
       articleStr: articleStr
+    }
+  },
+  head () {
+    return {
+      title: 'Costa Huang | The aircraft Shooting Problem (Dynamic Programming)'
     }
   }
 }

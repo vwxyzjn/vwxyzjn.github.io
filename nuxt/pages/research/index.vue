@@ -20,6 +20,11 @@ export default {
     return {
       articlesInfo: articlesInfo
     }
+  },
+  head () {
+    return {
+      title: "Costa Huang's Research"
+    }
   }
 }
 </script>

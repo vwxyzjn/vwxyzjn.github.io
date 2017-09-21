@@ -839,6 +839,11 @@ export default {
     return {
       articleStr: articleStr
     }
+  },
+  head () {
+    return {
+      title: 'Costa Huang | LSTM-RNN For Sentiment Analysis'
+    }
   }
 }
 </script>
