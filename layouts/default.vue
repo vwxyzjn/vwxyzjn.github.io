@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss"
 
 *
@@ -53,5 +53,17 @@ export default {
 .content
   padding: 0 20px
   padding-top: 2rem
+
+body
+  font-size: 1rem
+
+  @include media-breakpoint-up(sm)
+    font-size: 1.2rem
+  
+  @include media-breakpoint-up(md)
+    font-size: 1.4rem
+
+  @include media-breakpoint-up(lg)
+    font-size: 1.6rem
 
 </style>
