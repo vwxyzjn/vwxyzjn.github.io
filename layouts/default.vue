@@ -1,18 +1,8 @@
 <template>
-  <b-container fluid>
-    <b-row>
+  <b-container>
+    <b-row >
       <b-col cols="12" md="4" class="sidebar">
-        <div class="profile_info">
-          <img class="profile_picture" src="~/assets/profile_picture.svg">
-          <h1>Costa <span style="font-weight:bold">Huang</span></h1>
-          <h5>strive for interesting things</h5>
-          <div class="menu-item-wrapper">
-            <router-link to="/">resume</router-link>
-            <router-link to="/research">research</router-link>
-            <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
-            <a href="https://github.com/vwxyzjn">github</a>
-          </div>
-        </div>
+        <profile-info></profile-info>
       </b-col>
       <div class="content col-md-6">
         <transition name="fade" mode="out-in">
@@ -29,13 +19,17 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
-import articleView from '~/components/articleView.vue'
+import articleView from '@/components/articleView.vue'
+import ProfileInfo from '@/components/Profile.vue'
 
 Vue.use(BootstrapVue)
 Vue.component('article-view', articleView)
 
 export default {
   name: 'app',
+  components: {
+    ProfileInfo
+  },
   methods: {
     to_resume () {
       this.$router.push('/')
@@ -48,6 +42,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss"
+
 *
   font-family: 'Roboto', sans-serif, -apple-system, "Helvetica Neue", Arial
 
@@ -58,60 +54,11 @@ export default {
   opacity: 0
 
 .sidebar
-  position: relative
-  bottom: 0
-  top: 0
-  padding-top: 5vh
-  text-align: center
+  @include media-breakpoint-up(md) 
+    padding-top: 200px
 
-  img
-    width: 130px
-    height: 130px
-
-  h5
-    font-size: 1.05em
-    color: #53657D
-
-  .menu-item-wrapper
-    display: flex
-    width: 100%
-    justify-content: center
-    flex-wrap: wrap
-    padding-top: 18px
-
-    a
-      padding: 10px
-      color: #9DBF15
-
-    .router-link-exact-active
-      color: black
-
-
-
-@media (min-width: 768px)
-  .sidebar
-    height: 100vh
-    padding-top: 20vh
-    position: sticky
-    text-align: right
-
-    .profile_info
-      display: inline-block
-      text-align: center
-      width: 70%
-
-  #app
-    padding-right: calc(100% - 100vw + 17px)
-
-
-  .content
-    padding-top: 60px
-
-
-.title
-  margin-bottom: 20px
-
-.section
-  padding-bottom: 30px
+.content
+  padding: 0 20px
+  padding-top: 2rem
 
 </style>
