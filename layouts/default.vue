@@ -1,35 +1,37 @@
 <template>
-  <div id="app">
-    <div class="container-fluid" >
-      <div class="row">
-        <div class="sidebar col-md-4">
-          <div class="profile_info">
-            <img class="profile_picture" src="~/assets/profile_picture.svg">
-            <h1>Costa <span style="font-weight:bold">Huang</span></h1>
-            <h5>strive for interesting things</h5>
-            <div class="menu-item-wrapper">
-              <router-link to="/">resume</router-link>
-              <router-link to="/research">research</router-link>
-              <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
-              <a href="https://github.com/vwxyzjn">github</a>
-            </div>
+  <b-container fluid>
+    <div class="row">
+      <div class="sidebar col-md-4">
+        <div class="profile_info">
+          <img class="profile_picture" src="~/assets/profile_picture.svg">
+          <h1>Costa <span style="font-weight:bold">Huang</span></h1>
+          <h5>strive for interesting things</h5>
+          <div class="menu-item-wrapper">
+            <router-link to="/">resume</router-link>
+            <router-link to="/research">research</router-link>
+            <a href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU">math</a>
+            <a href="https://github.com/vwxyzjn">github</a>
           </div>
         </div>
-        <div class="content col-md-6">
-          <transition name="fade" mode="out-in">
-            <nuxt />
-          </transition>
-          <!-- <resume></resume> -->
-        </div>
+      </div>
+      <div class="content col-md-6">
+        <transition name="fade" mode="out-in">
+          <nuxt />
+        </transition>
+        <!-- <resume></resume> -->
       </div>
     </div>
-  </div>
+  </b-container>
 </template>
 
 <script>
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vue from 'vue'
-import '../node_modules/bootstrap/scss/bootstrap.scss'
+import BootstrapVue from 'bootstrap-vue'
 import articleView from '~/components/articleView.vue'
+
+Vue.use(BootstrapVue)
 Vue.component('article-view', articleView)
 
 export default {
