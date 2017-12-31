@@ -46,7 +46,9 @@ export default {
   opacity: 0
 
 .sidebar
-  padding-top: 3rem
+  padding-top: 2rem
+  @include media-breakpoint-up(lg) 
+    padding-top: 6rem
 
 .content
   padding: 0 20px
