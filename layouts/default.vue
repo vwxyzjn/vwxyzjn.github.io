@@ -1,7 +1,7 @@
 <template>
   <b-container fluid>
-    <div class="row">
-      <div class="sidebar col-md-4">
+    <b-row>
+      <b-col cols="12" md="4" class="sidebar">
         <div class="profile_info">
           <img class="profile_picture" src="~/assets/profile_picture.svg">
           <h1>Costa <span style="font-weight:bold">Huang</span></h1>
@@ -13,14 +13,14 @@
             <a href="https://github.com/vwxyzjn">github</a>
           </div>
         </div>
-      </div>
+      </b-col>
       <div class="content col-md-6">
         <transition name="fade" mode="out-in">
           <nuxt />
         </transition>
         <!-- <resume></resume> -->
       </div>
-    </div>
+    </b-row>
   </b-container>
 </template>
 
@@ -86,10 +86,7 @@ export default {
     .router-link-exact-active
       color: black
 
-.content
-  padding: 40px
-  position: relative
-  bottom: 0
+
 
 @media (min-width: 768px)
   .sidebar
