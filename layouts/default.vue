@@ -29,14 +29,6 @@ export default {
   name: 'app',
   components: {
     ProfileInfo
-  },
-  methods: {
-    to_resume () {
-      this.$router.push('/')
-    },
-    to_research () {
-      this.$router.push('/research')
-    }
   }
 }
 </script>
