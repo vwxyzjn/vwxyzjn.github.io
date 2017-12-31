@@ -1,15 +1,15 @@
 <template>
   <b-container>
     <b-row >
-      <b-col cols="12" md="4" class="sidebar">
+      <b-col cols="12" lg="4" class="sidebar">
         <profile-info></profile-info>
       </b-col>
-      <div class="content col-md-6">
+      <b-col cols="12" lg="8"  class="content">
         <transition name="fade" mode="out-in">
           <nuxt />
         </transition>
         <!-- <resume></resume> -->
-      </div>
+      </b-col>
     </b-row>
   </b-container>
 </template>
@@ -54,8 +54,7 @@ export default {
   opacity: 0
 
 .sidebar
-  @include media-breakpoint-up(md) 
-    padding-top: 200px
+  padding-top: 3rem
 
 .content
   padding: 0 20px
