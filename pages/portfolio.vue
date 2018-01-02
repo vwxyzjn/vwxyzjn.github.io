@@ -22,7 +22,7 @@
         | During my 2017 summer research, Dr. Chris Healy and I created this
         | Python package that crawls the traffic flow data of your favorite routes
         |, cities by using the API provided by HERE.com
-      b-link.card-link(href='https://streettraffic.github.io/docs/docindex.html') (Beautiful) Documentation
+      b-link.card-link(href='https://streettraffic.org/docs/modules/streettraffic.html') (Beautiful) Documentation
       b-link.card-link(href='https://github.com/streettraffic/streettraffic') Github
 
     b-card.mb-3(title='Sentiment Analysis of Movie Review', tag='article')
