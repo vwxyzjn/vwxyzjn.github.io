@@ -1,6 +1,6 @@
 # Costa's Main Program for Blog
 
-## This project is online at https://costahuang.me/#/
+## This project is online at https://costahuang.me/
 
 Some key technologies that are involved in this project:
  *[Affinity Designer](https://affinity.serif.com/en-us/designer/) for prototyping some pages and then actually built the page. 
