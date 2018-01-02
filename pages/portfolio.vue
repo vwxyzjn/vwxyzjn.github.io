@@ -37,7 +37,7 @@
       p.card-text
         | Because of my Computer Science background, my Abstract Algebra Professor Dr. Douglas Rall suggested me to write this 
         | fun program that could brute force all possible permutations of binary operations on a given set. 
-        | It further investigate which permutation, along with the given set, defines a valid group.
+        | It further investigates which permutation, along with the given set, defines a valid group.
       b-link.card-link(href='https://github.com/vwxyzjn/Abstract_Algebra_Finite_Group_Generator') Github
 
     b-card.mb-3(title='Reproduction of newsfeed.fb.com', tag='article')
@@ -64,3 +64,13 @@
   h4
     font-weight: bold
 </style>
+
+<script>
+export default {
+  head () {
+    return {
+      title: "Costa Huang | Portfolio"
+    }
+  }
+}
+</script>
