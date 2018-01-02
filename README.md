@@ -1,4 +1,4 @@
-# Costa's Main Program for Blog
+# My personal blog built by Nuxt.js
 
 ## This project is online at https://costahuang.me/
 
