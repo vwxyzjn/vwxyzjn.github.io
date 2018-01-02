@@ -1,8 +1,10 @@
 <template>
   <b-container>
     <b-row >
-      <b-col cols="12" lg="4" class="sidebar">
-        <profile-info></profile-info>
+      <b-col cols="12" lg="4">
+        <div class="sticky-top sidebar" >
+          <profile-info ></profile-info>
+        </div>
       </b-col>
       <b-col cols="12" lg="8"  class="content">
         <transition name="fade" mode="out-in">
@@ -55,15 +57,22 @@ export default {
   padding-top: 2rem
 
 body
-  font-size: 1rem
+  font-size: 18px
+  line-height: 1.618em
+  margin-bottom: 1.618em
 
   @include media-breakpoint-up(sm)
     font-size: 1.2rem
-  
-  @include media-breakpoint-up(md)
-    font-size: 1.4rem
 
-  @include media-breakpoint-up(lg)
-    font-size: 1.6rem
+p
+  margin-bottom: 1.618em
+
+h1
+  font-size: 2em
+  line-height: 1.19em
+  margin-bottom: 0.5em
+  margin-top: 0.32em
+  @media (min-width: 36em)
+    font-size: 2.618em
 
 </style>
