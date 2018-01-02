@@ -1,113 +1,47 @@
-<template lang="pug">
-.resume
-  .education.section
-    h2.title Education
-    hr
-    .item
-      #textbox
-        h6.position_title Furman University, Greenville, SC
-        h6.related_time May 2018
-      ul
-        li Bachelor of Science in Computer Science
-        li Bachelor of Science in Applied Math
+<template>
+  <div>
+    <h1>Hello, </h1>
+    <p>
+      welcome to my personal website.
+      My name is Costa Huang and I am an undergraduate @ Furman University.
+      I like AI and web programming.
+    </p>
+    <p>
+      My most skilled languages are Python and JavaScript/Node.js.
+      I use Python for general programming tasks such as Data Analysis,
+      Web Crawler, Machine Learning, Mathematics, and etc, and I use JavaScript/Node.js for
+      web programming by using frameworks such as Vue.js, React.js, Vuetify.js, etc
+    </p>
+    <p>  
+      I am currently applying to some universities for a Ph.D. position, hoping to study
+      more about RL (Reinforcement Learning).
+    </p>
+    <h1>Projects</h1>
+    <b-row>
+      <b-col>
+        <b-card title="Reproduction of Deepmind’s StarCraft II Research"
+            tag="article"
+            class="mb-2">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+            <b-link href="#" class="card-link">Another link</b-link>
+        </b-card>
+      </b-col>
+      <b-col>
+        <b-card title="Linear Programming for Optimal Scheduling"
+            tag="article"
+            class="mb-2">
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the bulk of the card's content.
+          </p>
+          <b-button href="#" variant="primary">Go somewhere</b-button>
+        </b-card>
+      </b-col>
+    </b-row>
 
-  .experience.section
-    h2.title Experience
-    hr
-    // Math & Computer Science Tutor
-    .item
-      #textbox
-        h6.position_title Computer Science Lab Assistant
-        h6.related_time Spring 2017—Present
-      h6.address Furman University Computer Science Department, Greenville, SC
-      ul
-        li Tutored Python in terms of picture manipulation, sound editing and debugging
-        li Provide up to 10 hours of tutoring every week
-    // Vice President of Technology
-    .item
-      #textbox
-        h6.position_title Vice President of Technology
-        h6.related_time Fall 2016—Present
-      h6.address Furman University Investment Club, Greenville, SC
-      ul
-        li Update portfolio information whenever new trade is made
-        li
-          | Founded 
-          a(href='http://portfolio.fuinvestment.com') Fuinvestment.com 
-          |  that shows equity curve, portfolio, and transactions history
-        li
-          | Collaborated with other core members to raise campus awareness and introduced stock tracker game
-    // Math & Computer Science Tutor
-    .item
-      #textbox
-        h6.position_title Math & Computer Science Tutor
-        h6.related_time Fall 2016—Present
-      h6.address Furman University Tutoring Center, Greenville, SC
-      br
-    // Accounting Intern
-    .item
-      #textbox
-        h6.position_title Accounting Intern
-        h6.related_time Summer 2015
-      h6.address DBO LLC, Hainan Division, China
-      br
-    // Tax Intern
-    .item
-      #textbox
-        h6.position_title Tax Intern
-        h6.related_time Spring 2015
-      h6.address Volunteer Income Tax Assistance (VITA), , Greenville, SC
-      br
+    
 
+
+  </div>
 </template>
-
-<script>
-export default {
-  head () {
-    return {
-      title: "Costa Huang's Resume"
-    }
-  }
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-#textbox {
-}
-
-.section {
-  padding-bottom: 25px;
-}
-
-.position_title{
-  font-style: italic; 
-}
-
-.related_time {
-  font-style: italic; 
-}
-
-.address {
-  opacity: 0.7;
-  color: #53657D;
-}
-
-.experience {
-  .item {
-    padding-bottom: 13px;
-  }
-}
-
-li {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  #textbox {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-}
-</style>
