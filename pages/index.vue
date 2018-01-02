@@ -14,32 +14,9 @@
     </p>
     <p>  
       I am currently applying to some universities for a Ph.D. position, hoping to study
-      more about RL (Reinforcement Learning).
+      more about RL (Reinforcement Learning), a subject that, in my opinion, will provide insights
+      about the general/strong intelligence
     </p>
-    <h1>Projects</h1>
-    <b-row>
-      <b-col>
-        <b-card title="Reproduction of Deepmind’s StarCraft II Research"
-            tag="article"
-            class="mb-2">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-            <b-link href="#" class="card-link">Another link</b-link>
-        </b-card>
-      </b-col>
-      <b-col>
-        <b-card title="Linear Programming for Optimal Scheduling"
-            tag="article"
-            class="mb-2">
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the bulk of the card's content.
-          </p>
-          <b-button href="#" variant="primary">Go somewhere</b-button>
-        </b-card>
-      </b-col>
-    </b-row>
-
     
 
 
