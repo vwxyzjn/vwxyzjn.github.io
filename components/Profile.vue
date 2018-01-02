@@ -8,10 +8,10 @@
       <h5>strive for interesting things</h5>
     </b-col>
     <b-col cols="12" class="text-center pt-2">
-      <b-link to="/" class="p-3" exact-active-class="exact-active-class">resume</b-link>
-      <b-link to="/research" class="p-3" exact-active-class="exact-active-class">research</b-link>
-      <b-link href="https://drive.google.com/open?id=0B0wkgJhWMQfgazItYXdsWk9ZUkU" class="p-3">math</b-link>
-      <b-link href="https://github.com/vwxyzjn" class="p-3">github</b-link>
+      <b-link to="/" exact-active-class="exact-active-class">home</b-link>
+      <b-link to="/research" exact-active-class="exact-active-class">research</b-link>
+      <b-link href="https://costahuang.me/resume.pdf">resume</b-link>
+      <b-link href="https://github.com/vwxyzjn" >github</b-link>
     </b-col>
   </b-row>
 </template>
@@ -22,4 +22,5 @@
 
 a
   color: #9DBF15
+  padding: 0 0.5rem
 </style>
