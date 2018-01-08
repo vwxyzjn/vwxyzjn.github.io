@@ -69,7 +69,7 @@
 export default {
   head () {
     return {
-      title: "Costa Huang | Portfolio"
+      title: 'Costa Huang | Portfolio'
     }
   }
 }
