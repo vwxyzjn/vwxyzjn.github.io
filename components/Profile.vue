@@ -10,7 +10,7 @@
     <b-col cols="12" class="text-center pt-2">
       <b-link to="/" exact-active-class="exact-active-class">home</b-link>
       <b-link to="/portfolio" exact-active-class="exact-active-class">portfolio</b-link>
-      <b-link href="https://costahuang.me/resume.pdf">resume</b-link>
+      <b-link href="https://costahuang.me/CostaHuang.pdf">resume</b-link>
       <b-link href="https://github.com/vwxyzjn" >github</b-link>
     </b-col>
   </b-row>

@@ -2,7 +2,7 @@
   <div>
     <h1>Hello, </h1>
     <p>
-      welcome to my personal website.
+      Welcome to my personal website.
       My name is Costa Huang and I am an undergraduate @ Furman University.
       I like AI and web programming.
     </p>
@@ -25,10 +25,10 @@
 
 <script>
 export default {
-  head () {
+  head() {
     return {
-      title: 'Costa Huang | Home'
-    }
+      title: "Costa Huang | Home"
+    };
   }
-}
+};
 </script>
