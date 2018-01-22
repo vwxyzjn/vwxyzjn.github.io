@@ -10,7 +10,11 @@
       My most skilled languages are Python and JavaScript/Node.js.
       I use Python for general programming tasks such as Data Analysis,
       Web Crawler, Machine Learning, Mathematics, and etc, and I use JavaScript/Node.js for
-      web programming by using frameworks such as Vue.js, React.js, Vuetify.js, etc.
+      web programming by using frameworks such as Vue.js, React.js, Vuetify.js, and etc.
+    </p>
+    <p>
+      In addition, I frequently use Latex to type Math and CS homeworks. You may find some samples of my work here: 
+      <a href="https://drive.google.com/drive/folders/0B0wkgJhWMQfgazItYXdsWk9ZUkU?usp=sharing">Latex Samples</a>
     </p>
     <p>  
       I am currently applying to some universities for a Ph.D. position, hoping to study
@@ -25,10 +29,10 @@
 
 <script>
 export default {
-  head() {
+  head () {
     return {
-      title: "Costa Huang | Home"
-    };
+      title: 'Costa Huang | Home'
+    }
   }
-};
+}
 </script>
