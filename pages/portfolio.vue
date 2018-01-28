@@ -23,9 +23,9 @@
 
     b-card.mb-3(title='Linear Programming for Optimal Scheduling', tag='article')
       p.card-text 
-        | For my Operations Research case study about a shceduling problem, 
+        | For my Operations Research case study, which was about a scheduling problem, 
         | I modeled it by using integer programming and later solved it by using
-        | Gurobipy, a python optimiazation pacakge.
+        | Gurobipy, a python optimization package.
       b-link.card-link(href='http://costahuang.me/files/Linear_Programming_for_Optimal_Scheduling.pdf') PDF
       b-link.card-link(href='http://costahuang.me/LP_optimization_python/') Jupyter Writeup
       b-link.card-link(href='https://github.com/vwxyzjn/LP_optimization_python') Github
@@ -34,7 +34,7 @@
       p.card-text
         | During my 2017 summer research, Dr. Chris Healy and I created this
         | Python package that crawls the traffic flow data of your favorite routes
-        |, cities by using the API provided by HERE.com
+        | and cities by using the APIs provided by HERE.com
       b-link.card-link(href='https://streettraffic.org/docs/modules/streettraffic.html') (Beautiful) Documentation
       b-link.card-link(href='https://github.com/streettraffic/streettraffic') Github
 
@@ -55,7 +55,7 @@
 
     b-card.mb-3(title='Reproduction of newsfeed.fb.com', tag='article')
       p.card-text
-        | Facinated by the elegant design and beautiful animations of 
+        | Fascinated by the elegant design and beautiful animations of 
         a(href="newsfeed.fb.com") newsfeed.fb.com
         |, I used Vue.js and GSAP to reproduce and learn its implementation.
       b-link.card-link(href='http://costahuang.me/Reproduction_of_newsfeed.fb.com/') Demo
@@ -66,7 +66,7 @@
         | Buying vintage fountain pens at 
         a(href="http://gregminuskin.com/") Greg Minuskin
         |  was challenging because the seller would put pens on sale at some random
-        | time. As a computer scientist, I wrote a script that crawls the pens information
+        | time. As a computer scientist, I wrote a script that crawls the listings of pens
         | so that it would send me an email whenever a new fountain pen was found :)
       b-link.card-link(href='https://github.com/vwxyzjn/penspider') Github
 
