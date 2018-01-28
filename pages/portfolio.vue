@@ -8,7 +8,7 @@
       b-link.card-link(href='https://costahuang.me/SC2AI') Jupyter Writeup
       b-link.card-link(href='https://github.com/vwxyzjn/SC2AI') Github
 
-    b-card.mb-3(title='Material-Designed Starter Template for Vuetifyjs Framework', tag='article')
+    b-card.mb-3(title='Material-Designed Templates for Vuetifyjs Framework', tag='article')
       p.card-text 
         | While I was being the TA for Web Programming class, 
         a(href="https://vuetifyjs.com/") Vuetifyjs 
