@@ -8,6 +8,19 @@
       b-link.card-link(href='https://costahuang.me/SC2AI') Jupyter Writeup
       b-link.card-link(href='https://github.com/vwxyzjn/SC2AI') Github
 
+    b-card.mb-3(title='Material-Designed Starter Template for Vuetifyjs Framework', tag='article')
+      p.card-text 
+        | While I was being the TA for Web Programming class, 
+        a(href="https://vuetifyjs.com/") Vuetifyjs 
+        | did not have any starter design template for beginners.
+        | Students had a hard time starting with Vuetifyjs. Because of this, I wrote two material-designed templates, which were later merged 
+        | into Vuetify's official documentation (See 
+        a(href="https://github.com/vuetifyjs/docs/pull/181") #181
+        | )
+      b-link.card-link(href='https://vuetifyjs.com/themes/parallax-starter/') Parallax Template
+      b-link.card-link(href='https://vuetifyjs.com/themes/blog-starter') Blog Template
+      b-link.card-link(href='https://vuetifyjs.com/pre-made-themes') Vuetify's Premade Templates
+
     b-card.mb-3(title='Linear Programming for Optimal Scheduling', tag='article')
       p.card-text 
         | For my Operations Research case study about a shceduling problem, 
