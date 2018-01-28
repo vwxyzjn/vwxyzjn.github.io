@@ -4,20 +4,27 @@
     <p>
       Welcome to my personal website.
       My name is Costa Huang and I am an undergraduate @ Furman University.
-      I like AI and web programming.
+    </p>
+    <p>
+      I enjoy AI and web programming, because one could explore and build many fascinating projects
+      such as <a href="https://costahuang.me/SC2AI/">training StarCraft II agents to play mini-games</a>,
+      <a href="https://vuetifyjs.com/themes/parallax-starter/">building a web design template</a>,
+      <a href="https://github.com/streettraffic/streettraffic">collecting and visualizing traffic data</a>,
+      and <a href="https://github.com/vwxyzjn/penspider">crawling a site that sells fountain pens</a>.
     </p>
     <p>
       My most skilled languages are Python and JavaScript/Node.js.
       I use Python for general programming tasks such as Data Analysis,
-      Web Crawler, Machine Learning, Mathematics, and etc, and I use JavaScript/Node.js for
-      web programming by using frameworks such as Vue.js, React.js, Vuetify.js, and etc.
+      Web Crawler, Machine Learning, Mathematics, and etc, while I use JavaScript/Node.js for
+      web programming by using frameworks such as Vue.js, React.js, Vuetify.js, and etc. Furthermore,
+      I have used Rust and Go to write some small projects.
     </p>
     <p>
-      In addition, I frequently use Latex to type Math and CS homeworks. You may find some samples of my work here: 
+      I frequently use Latex to type Math and CS homeworks. You may find some samples of my work here: 
       <a href="https://drive.google.com/drive/folders/0B0wkgJhWMQfgazItYXdsWk9ZUkU?usp=sharing">Latex Samples</a>
     </p>
     <p>  
-      I am currently applying to some universities for a Ph.D. position, hoping to study
+      I am currently applying to some universities for a Computer Science Ph.D. position, hoping to study
       more about RL (Reinforcement Learning), a subject that, in my opinion, will provide insights
       about the general/strong intelligence.
     </p>
