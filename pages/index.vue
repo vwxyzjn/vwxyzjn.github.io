@@ -24,7 +24,7 @@
       <a href="https://drive.google.com/drive/folders/0B0wkgJhWMQfgazItYXdsWk9ZUkU?usp=sharing">Latex Samples</a>
     </p>
     <p>  
-      I am currently applying to some universities for a Computer Science Ph.D. position, hoping to study
+      I have applied to some universities for a Computer Science Ph.D. position, yearning to study
       more about RL (Reinforcement Learning), a subject that, in my opinion, will provide insights
       about the general/strong intelligence.
     </p>
