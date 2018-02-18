@@ -16,7 +16,7 @@
 
     b-card.mb-3(title='(2017) Material-Designed Templates for Vuetifyjs Framework', tag='article')
       p.card-text 
-        | While I was being the TA for Web Programming class, 
+        | While I was the TA for Web Programming class, 
         a(href="https://vuetifyjs.com/") Vuetifyjs 
         | did not have any starter design template for beginners.
         | Students had a hard time starting with Vuetifyjs. Because of this, I wrote two material-designed templates, which were later merged 
