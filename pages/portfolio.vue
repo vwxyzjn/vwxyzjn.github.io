@@ -1,6 +1,12 @@
 <template lang="pug">
   div
-    b-card.mb-3(title='Reproduction of Deepmind’s StarCraft II Research', tag='article')
+    b-card.mb-3(title='(2018) Add Disqus to Jupyter Notebook', tag='article')
+      p.card-text 
+        | I wrote a Python Package that allows the user to inject and display Disqus in your jupyter notebook, adding a commenting section
+        | for the notebook. This could be especially helpful if other people have questions about your notebook demonstration.
+      b-link.card-link(href='https://github.com/vwxyzjn/jupyter_disqus') Github
+
+    b-card.mb-3(title='(2017) Reproduction of Deepmind’s StarCraft II Research', tag='article')
       p.card-text 
         | For my Computer Science Seminar project, I integrated Tensorforce (a Reinforcement Learning library on top of 
         | Tensorflow) and OpenAI Gym to train SC II game agents, resulting in
