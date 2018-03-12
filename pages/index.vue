@@ -23,14 +23,6 @@
       I frequently use Latex to type Math and CS homeworks. You may find some samples of my work here: 
       <a href="https://drive.google.com/drive/folders/0B0wkgJhWMQfgazItYXdsWk9ZUkU?usp=sharing">Latex Samples</a>
     </p>
-    <p>  
-      I have applied to some universities for a Computer Science Ph.D. position, yearning to study
-      more about RL (Reinforcement Learning), a subject that, in my opinion, will provide insights
-      about the general/strong intelligence.
-    </p>
-    
-
-
   </div>
 </template>
 
