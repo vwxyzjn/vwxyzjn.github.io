@@ -16,7 +16,7 @@ import 'prismjs/themes/prism-coy.css'
 import 'prismjs/components/prism-python.js'
 
 export default {
-  name: 'article',
+  name: 'articleView',
   props: {
     article: String
   },
