@@ -3,7 +3,7 @@
     <h1>Hello, </h1>
     <p>
       Welcome to my personal website.
-      My name is Costa Huang and I am a Computer Science Ph.D candidate @ Drexel University.
+      My name is Costa Huang and I am a Computer Science Ph.D student @ Drexel University.
     </p>
     <p>
       I enjoy AI and web programming, because one could explore and build many fascinating projects

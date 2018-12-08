@@ -1,5 +1,10 @@
 <template lang="pug">
   div
+    b-card.mb-3(title='(2018) Portwarden', tag='portfolio_item')
+      p.card-text 
+        | Create (Scheduled) Encrypted Backups of Your Bitwarden Vault with Attachments (to Google Drive) 
+      b-link.card-link(href='https://github.com/vwxyzjn/portwarden') Github
+    
     b-card.mb-3(title='(2018) Add Disqus to Jupyter Notebook', tag='portfolio_item')
       p.card-text 
         | I wrote a Python Package that allows the user to inject and display Disqus in your jupyter notebook, adding a commenting section
