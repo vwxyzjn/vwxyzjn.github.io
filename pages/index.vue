@@ -3,9 +3,11 @@
     <h1>Hello, </h1>
     <p>
       Welcome to my personal website.
-      My name is Costa Huang and I am a Computer Science Ph.D student @ Drexel University.
+      My name is Costa Huang and I am a Computer Science Ph.D student @ Drexel University, in collaboration with my advisor
+      <a href="https://sites.google.com/site/santiagoontanonvillar/">Santiago Ontañón</a>.
     </p>
     <p>
+      My primary research now is to use RL (Reinforcement Learning) algorithms to train agents in RTS (Real-time Strategy Games).
       I enjoy AI and web programming, because one could explore and build many fascinating projects
       such as <a href="https://costahuang.me/SC2AI/">training StarCraft II agents to play mini-games</a>,
       <a href="https://vuetifyjs.com/themes/parallax-starter/">building a web design template</a>,
